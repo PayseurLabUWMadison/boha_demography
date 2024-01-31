@@ -2,7 +2,7 @@
 This Markdown file contains the steps used to process raw sequencing reads, align them to the *P. leucopus* reference genome, and call/filter variants with GATK. 
 
 ## Software information
-All of the software used is either available in the packages directory or is contained within the `bioinfo` conda environment, which can be constructed from the `bioinfo.yml` file present in the packages directory.
+All of the software used is either available in the [packages](https://github.com/PayseurLabUWMadison/boha_demography/tree/964f23be79436ce25301ac28951186464e04cc30/variant_calling/packages) directory or is contained within the `bioinfo` conda environment, which can be constructed from the [bioinfo.yml](https://github.com/PayseurLabUWMadison/boha_demography/blob/964f23be79436ce25301ac28951186464e04cc30/variant_calling/packages/bioinfo.yml) file present in the packages directory.
 
 Below are details about each individual software package:
 - BBduk (from BBMap version 38.96): available in packages directory
