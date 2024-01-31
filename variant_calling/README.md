@@ -77,7 +77,7 @@ We used the BWA-MEM algorithm to map paired-end reads to the *P. leucopus* refer
 ```
 bash variant_calling/scripts/read_group.sh variant_calling/reference_files/GCF_004664715.2_UCI_PerLeu_2.1_genomic.fna.gz {sample}_L00{X}_adaptrim_qualtrim_1P.fastq.gz {sample}_L00{X}_adaptrim_qualtrim_1P.fastq.gz {sample} {sample}_L00{X}_sorted.bam
 ```
->Note: The `read_group.sh` script is required to properly format the RG tags in the output BAM file. The BWA-MEM algorithm is run from inside this bash script. The BWA command within this script has the following format: `bwa mem -t 8 -R $(echo "@RG\tID:${ID}\tPL:${PL}\tPU:${PU}\tLB:${LB}\tSM:${SM}") $REF $R1 $R2 | samtools sort -o $OUT`.
+>Note: The [read_group.sh](https://github.com/PayseurLabUWMadison/boha_demography/blob/main/variant_calling/scripts/read_group.sh) script is required to properly format the RG tags in the output BAM file. The BWA-MEM algorithm is run from inside this bash script. The BWA command within this script has the following format: `bwa mem -t 8 -R $(echo "@RG\tID:${ID}\tPL:${PL}\tPU:${PU}\tLB:${LB}\tSM:${SM}") $REF $R1 $R2 | samtools sort -o $OUT`.
 
 Then we calculated some quality statistics on each partial alignment file using samtools.
 ```
