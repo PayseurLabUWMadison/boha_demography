@@ -2,7 +2,7 @@
 This Markdown file details the steps used to fit two-population demographic models to the jSFS, perform model comparisons, estimate parameter uncertainties, simulate sequence data under the best-fit demographic models, and compute windowed summary statistics from both simulated and empirical data.
 
 ## Software information
-All of the software used is contained within the `demog` conda environment, which can be constructed from the [demog.yml] (https://github.com/PayseurLabUWMadison/boha_demography/blob/main/demographic_inference/packages/demog.yml) file present in the [packages](https://github.com/PayseurLabUWMadison/boha_demography/tree/main/demographic_inference/packages) directory.
+All of the software used is contained within the `demog` conda environment, which can be constructed from the [demog.yml](https://github.com/PayseurLabUWMadison/boha_demography/blob/main/demographic_inference/packages/demog.yml) file present in the [packages](https://github.com/PayseurLabUWMadison/boha_demography/tree/main/demographic_inference/packages) directory.
 
 Below are details about individual software packages:
 - moments (version 1.1.15)
