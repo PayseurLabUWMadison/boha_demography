@@ -1,13 +1,12 @@
 # Migration simulations and singleton analysis
 This Markdown file details the steps used to augment the best-fit demographic models with various scenarios of migration between focal populations and a single, unsampled "ghost" population. Following these simulations, we compared the genomic and sample distribution of singletons between the empirical island datasets and simulated datasets that either included or excluded migration.
 
-## Software information [TO DO]
+## Software information
 All of the software used is contained within the `singletons` conda environment, which can be constructed from the singletons.yml file present in the packages directory.
 
 Below are details about individual software packages:
 - msprime (version 1.2.0)
-- vcftools 
-- dplyr
+- vcftools (version 0.1.16)
 
 ## Migration simulations
 In order to characterize the effect of migration on the spatial (i.e., along the genome), and sample (i.e., among individuals) distribution of singleton variants, we can conduct chromosome-scale simulations using the inferred best-fit demographic parameters as a starting point and adding various forms of migration. The `sim_migration.py` script in the scripts directory acheives this by taking in a user-specified migration rate and migration duration, then simulating chromosome-sized genomic elements under the given demographic model. To increase computational efficiency, we ran this simulation script in a parallel fashion using UW-Madison's high-throughput computing system in order to obtain a genome-scale dataset of 25 100 Mbp "chromosomes" for each model/migration regime. Details about the migration parameters used can be found in the Materials and Methods section of the manuscript. The output of this script is a VCF-like file for a single genomic element under the specified demographic model. These individual chromosome VCFs can either be analyzed separately or concatenated within models to produce a genome-scale VCF dataset.
