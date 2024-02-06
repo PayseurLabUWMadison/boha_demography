@@ -21,6 +21,9 @@ output <- args[3]
 sf <- read.table(singletons)
 colnames(sf) <- c("chrom","pos","designation","indv","population","params")
 
+# Exclude non-singleton sites
+sf <- sf[sf$designation=="S",]
+
 # Read in the popfile output and assign column headers
 pf <- read.table(popfile)
 colnames(pf) <- c("indv","population")
